@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Competition Leaderboard</title>
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      font-family: Arial, sans-serif;
+    }
+    #header {
+      text-align: center;
+      padding: 20px;
+    }
+    #header img {
+      max-width: 200px;
+    }
+#leaderboard {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#leaderboard td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#leaderboard tr:nth-child(even){background-color: #f2f2f2;}
+
+#leaderboard tr:hover {background-color: #ddd;}
+
+#leaderboard th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+    .table-link {
+      display: inline-block;
+      padding: 5px 10px;
+      color: white;
+      background-color: #555;
+      text-decoration: none;
+      margin-right: 10px;
+      font-size: 12px;
+    }
+    .table-link.active {
+      background-color: #999;
+    }
+  </style>
+  <script>
+    function showTable(tableId) {
+      var tables = document.getElementsByClassName('leaderboard-table');
+      for (var i = 0; i < tables.length; i++) {
+        tables[i].style.display = 'none';
+      }
+      document.getElementById(tableId).style.display = 'table';
+
+      var links = document.getElementsByClassName('table-link');
+      for (var i = 0; i < links.length; i++) {
+        links[i].classList.remove('active');
+      }
+      document.getElementById(tableId + '-link').classList.add('active');
+    }
+  </script>
+</head>
+<body>
+  <div id="header">
+    <img src="crossfit_fareham_logo.png" alt="CrossFit Fareham Logo">
+  </div>
+  <div id="leaderboard-container">
+    <div id="nav">
+      <a href="#" class="table-link active" id="table1-link" onclick="showTable('table6')">Overall</a>
+      <a href="#" class="table-link active" id="table1-link" onclick="showTable('table1')">Workout 1</a>
+      <a href="#" class="table-link" id="table2-link" onclick="showTable('table2')">Workout 2</a>
+      <a href="#" class="table-link" id="table3-link" onclick="showTable('table3')">Workout 3</a>
+      <a href="#" class="table-link" id="table4-link" onclick="showTable('table4')">Workout 4</a>
+      <a href="#" class="table-link" id="table5-link" onclick="showTable('table5')">Workout 5</a>
+    </div>
+    <table id="table1" class="leaderboard-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Team 1</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Team 2</td>
+          <td>0</td>
+        </tr>
+<tr>
+          <td>Team 3</td>
+          <td>0</td>
+        </tr>
+<tr>
+          <td>Team 4</td>
+          <td>0</td>
+        </tr>
+<tr>
+          <td>Team 5</td>
+          <td>0</td>
+        </tr>
+        <!-- Add more rows for Workout 1 participants -->
+      </tbody>
+    </table>
+
+    <table id="table2" class="leaderboard-table" style="display: none;">
+      <thead>
+        <tr>
+          <td>Team 1</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Team 2</td>
+          <td>0</td>
+        </tr>
+<tr>
+          <td>Team 3</td>
+          <td>0</td>
+        </tr>
+<tr>
+          <td>Team 4</td>
+          <td>0</td>
+        </tr>
+<tr>
+          <td>Team 5</td>
+          <td>0</td>
+        </tr>
+        <!-- Add more rows for Workout 2 participants -->
+      </tbody>
+    </table>
+
+    <table id="table3" class="leaderboard-table" style="display: none;">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Team 1</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Team 2</td>
+          <td>0</td>
+        </tr>
+<tr>
+          <td>Team 3</td>
+          <td>0</td>
+        </tr>
+<tr>
+          <td>Team 4</td>
+          <td>0</td>
+        </tr>
+<tr>
+          <td>Team 5</td>
+          <td>0</td>
+        </tr>
+        <!-- Add more rows for Workout 3 participants -->
+      </tbody>
+    </table>
+
+    <table id="table4" class="leaderboard-table" style="display: none;">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Team 1</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Team 2</td>
+          <td>0</td>
+        </tr>
+<tr>
+          <td>Team 3</td>
+          <td>0</td>
+        </tr>
+<tr>
+          <td>Team 4</td>
+          <td>0</td>
+        </tr>
+<tr>
+          <td>Team 5</td>
+          <td>0</td>
+        </tr>
+        <!-- Add more rows for Workout 4 participants -->
+      </tbody>
+    </table>
+
+    <table id="table5" class="leaderboard-table" style="display: none;">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Team 1</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Team 2</td>
+          <td>0</td>
+        </tr>
+<tr>
+          <td>Team 3</td>
+          <td>0</td>
+        </tr>
+<tr>
+          <td>Team 4</td>
+          <td>0</td>
+        </tr>
+<tr>
+          <td>Team 5</td>
+          <td>0</td>
+        </tr>
+        <!-- Add more rows for Workout 5 participants -->
+      </tbody>
+    </table>
+<table id="table6" class="leaderboard-table" style="display: none;">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Team 1</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Team 2</td>
+          <td>0</td>
+        </tr>
+<tr>
+          <td>Team 3</td>
+          <td>0</td>
+        </tr>
+<tr>
+          <td>Team 4</td>
+          <td>0</td>
+        </tr>
+<tr>
+          <td>Team 5</td>
+          <td>0</td>
+        </tr>
+        <!-- Add more rows for Workout 5 participants -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    showTable('table1'); // Display the initial table on page load
+  </script>
+</body>
+</html>
